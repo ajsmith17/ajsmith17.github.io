@@ -14,9 +14,12 @@ $(() => {
         $("#year").html(data.Year);
         $("#rated").html(data.Rated);
         console.log(data);
+        if (data.Response == "False") {
+          alert(data.Error);
+        }
       },
       (error) => {
-        console.log(error);
+        alert(error);
       }
     );
   });
