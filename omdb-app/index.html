@@ -8,20 +8,76 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>Movie Info</h1>
-    <form>
-      <input type="text" placeholder="Find a movie...">
-      <input type="submit" value="Search">
-    </form>
-    <div>
-      <h2 id="title"></h2>
-      <img id="poster" alt="Movie Poster">
+    <div class="container">
+      <header>
+        <h1>Watch List</h1>
+      </header>
+      <h2>Movie Info</h2>
+      <form>
+        <input type="text" placeholder="Find a movie...">
+        <input type="submit" value="Search">
+      </form>
 
-      <dt>Year</dt>
-      <dd id="year"></dd>
+      <div class="main">
 
-      <dt>Rating</dt>
-      <dd id="rated"></dd>
+        <div class="info">
+
+          <div class="movie-heading">
+            <div class="addButton">
+              <button type="button" name="button">+</button>
+            </div>
+            <div class="heading-info">
+              <h2 id="title"></h2>
+              <nav>
+                <p id="rated"></p>
+                <p id="runtime"></p>
+                <p id="genre"></p>
+                <p id="released"></p>
+              </nav>
+            </div>
+
+          </div>
+          <div class="img-ratings">
+
+            <img id="poster" alt="Movie Poster">
+
+            <div class="ratings">
+              <h3>Ratings</h3>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDb">
+              <h4 id="IMDb"></h4>
+              <img src="https://www.smdp.com/wp-content/uploads/2018/08/RT.png" alt="Rotten Tomatoes">
+              <h4 id="rotten"></h4>
+              <img id="critic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Metacritic_logo.svg/1280px-Metacritic_logo.svg.png" alt="">
+              <h4 id="meta"></h4>
+            </div>
+
+          </div>
+
+          <div class="plot">
+            <p id="plot"></p>
+          </div>
+
+          <div class="director">
+            <span>Director:</span><p id="director"></p>
+          </div>
+
+          <div class="writers">
+            <span>Writers:</span><p id="writers"></p>
+          </div>
+
+          <div class="actors">
+            <span>Starring:</span><p id="actors"></p>
+          </div>
+
+        </div>
+
+        <div class="list">
+          <table>
+            <th>Watch List</th>
+          </table>
+        </div>
+
+      </div>
     </div>
   </body>
 </html>

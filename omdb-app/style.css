@@ -1,3 +1,111 @@
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+header {
+  border-bottom: 2px solid red;
+}
+
 div {
   border: 1px solid gold;
+}
+
+/* nav p {
+  border-right: 1px solid grey;
+  text-align: center;
+  /* padding: 6px; */
+/* } */
+
+/* nav p:last-of-type) {
+    border-right: 1px solid grey;/* This will not give border to last li element */
+/* } */
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  /* justify-content: space-between; */
+}
+
+table {
+  border: 1px solid blue;
+  width: 300px;
+}
+
+.list {
+  width: 30%;
+}
+
+.info {
+  width: 70%;
+}
+
+.movie-heading {
+  display: flex;
+  justify-content: space-around;
+}
+
+.heading-info {
+  flex-grow: 3;
+}
+
+.addButton {
+  flex-grow: 1;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.img-ratings {
+  display: flex;
+}
+
+.ratings {
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.ratings img {
+  width: 100px;
+}
+
+#critic {
+  width: 130px;
+}
+
+.ratings h3 {
+  text-align: center;
+}
+
+.director {
+  display: flex;
+  align-items: center;
+}
+
+#director {
+  padding-left: 10px;
+}
+
+.writers {
+  display: flex;
+  align-items: center;
+}
+
+#writers {
+  padding-left: 10px;
+}
+
+.actors {
+  display: flex;
+  align-items: center;
+}
+
+#actors {
+  padding-left: 10px;
 }
