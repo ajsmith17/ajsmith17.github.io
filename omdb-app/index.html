@@ -6,20 +6,40 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container">
 
       <header>
-        <h1>Watch List</h1>
+
+        <h1>The WatchList</h1>
       </header>
 
-      <h2>Movie Info</h2>
+      <div class="search">
+        <div class="leftSearch">
 
-      <form>
-        <input type="text" placeholder="Find a movie...">
-        <input type="submit" value="Search">
-      </form>
+          <form>
+            <input type="text" placeholder="Find a movie...">
+            <input type="submit" value="Search">
+          </form>
+        </div>
+        <div class="rightSearch">
+          <button id="openModal" class="modal-buttons" type="button">Site Help</button>
+          <div id="modal">
+            <div id="modal-textbox">
+              <h3>Site Instructions</h3>
+              <p>Type the movie title you wish to search for into the search bar and click "Search" or hit enter.</p>
+              <p>(Note: If the site alerts you that the movie you are searching for was not found, you may need to include conjunctions such as "The," as well as check your spelling.)</p>
+              <p>To add a movie to your "Watch List," simply click the button next to the title of the movie. To remove a movie from your list, click on the miniature version of that movie's poster inside the list. </p>
+              <div class="modal-footer">
+                <a id="close" class="modal-buttons">Close</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="main">
 
@@ -27,18 +47,18 @@
 
           <div class="movie-heading">
             <div class="addButton">
-              <button type="button" name="button">+</button>
+              <button id="addButton" type="button" name="button">+</button>
             </div>
             <div class="heading-info">
               <h2 id="title"></h2>
               <nav>
-                <p id="rated"></p>
-                <p class="separate">|</p>
-                <p id="runtime"></p>
-                <p class="separate">|</p>
-                <p id="genre"></p>
-                <p class="separate">|</p>
-                <p id="released"></p>
+                <div id="rated" class="separate"></div>
+                <div class="separate">|</div>
+                <div id="runtime" class="separate"></div>
+                <div class="separate">|</div>
+                <div id="genre" class="separate"></div>
+                <div class="separate">|</div>
+                <div id="released" class="separate"></div>
               </nav>
             </div>
 
@@ -49,11 +69,13 @@
 
             <div class="ratings">
               <h3>Ratings</h3>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDb">
+              <a href="https://www.imdb.com/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg" alt="IMDb"></a>
               <h4 id="IMDb"></h4>
-              <img src="https://www.smdp.com/wp-content/uploads/2018/08/RT.png" alt="Rotten Tomatoes">
+
+              <a href="https://www.rottentomatoes.com/" target="_blank"><img src="https://www.smdp.com/wp-content/uploads/2018/08/RT.png" alt="Rotten Tomatoes"></a>
               <h4 id="rotten"></h4>
-              <img id="critic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Metacritic_logo.svg/1280px-Metacritic_logo.svg.png" alt="">
+
+              <a href="https://www.metacritic.com/" target="_blank"><img id="critic" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Metacritic_logo.svg/1280px-Metacritic_logo.svg.png" alt=""></a>
               <h4 id="meta"></h4>
             </div>
 
@@ -63,26 +85,32 @@
             <p id="plot"></p>
           </div>
 
-          <div class="director">
+          <div class="stats">
             <span>Director:</span><p id="director"></p>
           </div>
 
-          <div class="writers">
+          <div class="stats">
             <span>Writers:</span><p id="writers"></p>
           </div>
 
-          <div class="actors">
+          <div class="stats">
             <span>Starring:</span><p id="actors"></p>
           </div>
 
         </div>
 
         <div class="list">
-          <h3>Watch List</h3>
+          <h3>WatchList</h3>
 
         </div>
 
       </div>
+
+      <footer>
+        <p>Created by: Aaron Smith</p>
+        <p>Site info provided by: OMDb API</p>
+      </footer>
+
     </div>
   </body>
 </html>

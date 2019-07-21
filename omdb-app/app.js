@@ -1,4 +1,5 @@
 $(() => {
+  // =========> FINDING A MOVIE <=========
   $('.info').css('visibility', 'hidden');
 
   $('form').on('submit', (event)=>{
@@ -18,7 +19,14 @@ $(() => {
           $('.info').css('visibility', 'visible');
         };
         $("#title").html(data.Title + " (" + data.Year + ")");
-        $("#released").html(data.Released + " (" + data.Country + ")");
+        let country = data.Country;
+        const newCountry = country.split(",", 2);
+        if (newCountry[1] == undefined) {
+          country = newCountry[0];
+        } else {
+          country = newCountry[0] + ','+ newCountry[1];
+        };
+        $("#released").html(data.Released + " (" + country + ")");
         $("#rated").html(data.Rated);
         $("#runtime").html(data.Runtime);
         const genre = data.Genre;
@@ -48,8 +56,10 @@ $(() => {
     );
 
   });
+  // ===========> (end) FINDING MOVIE <===========
 
-  $('button').on('click', (event) => {
+  // ==========> ADDING MOVIE TO LIST <============
+  $('#addButton').on('click', (event) => {
     event.preventDefault();
     let $listItem = $('<div class="listItem">');
     let $listLeft = $('<div class="listLeft">').css({'width': '50%'});
@@ -68,10 +78,24 @@ $(() => {
     });
 
   });
+  // ============> (end) ADDING MOVIE TO LIST <=============
 
-  // $('.listLeft').on('click', (event) => {
-  //   event.preventDefault();
-  //   $(event.currentTarget).parent().remove();
-  // });
+  // ===========> MODAL <===============
+
+  const $openBtn = $('#openModal');
+  const $modal = $('#modal');
+  const $close = $('#close');
+
+  const openModal = () => {
+    $modal.css('display', 'block');
+  };
+
+  const closeModal = () => {
+    $modal.css('display', 'none');
+  };
+
+  $openBtn.on('click', openModal)
+  $close.on('click', closeModal)
+  setTimeout(openModal, 2000);
 
 });
