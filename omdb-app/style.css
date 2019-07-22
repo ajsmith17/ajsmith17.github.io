@@ -23,7 +23,7 @@ header {
 }
 
 div {
-  border: 1px solid gold;
+  /* border: 1px solid gold; */
 }
 
 form {
@@ -90,7 +90,6 @@ form {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* margin-bottom: 5px; */
 }
 
 .info {
@@ -168,6 +167,7 @@ nav {
 #poster {
   border: 5px solid white;
   margin-top: 10px;
+  width: 45%;
   margin-bottom: 10px;
 }
 
@@ -254,7 +254,9 @@ footer {
   }
 
   .container {
-    width: 520px;
+    width: 94%;
+    display: flex;
+    flex-direction: column;
   }
 
   .popcorn {
@@ -283,8 +285,16 @@ footer {
   	line-height: 120%;
   }
 
-  .list h3 {
-    margin: 10px;
+  .modal-buttons {
+  	padding: 10px 14px;
+  	background-color: red;
+    font-size: 12px;
+    font-weight: bold;
+  	border: 2px solid white;
+  	outline: none;
+  	border-radius: 7px;
+  	color: white;
+  	cursor: pointer;
   }
 
   .main {
@@ -294,19 +304,61 @@ footer {
     align-items: stretch;
   }
 
+  /* #poster {
+    width: 50%;
+  } */
+
+  .ratings {
+    margin-top: 30px;
+  }
+
   .list {
-    /* margin-top: 22px; */
+    display: flex;
+    flex-direction: column;
     width: 99%;
-    height: 215px;
+    height: 188px;
     border: 2px solid red;
     text-align: center;
-    overflow: auto;
+    /* overflow: auto; */
     background-color: black;
     font-family: 'Russo One', sans-serif;
   }
 
+  .listTitle {
+    height: 15%;
+    justify-content: center;
+  }
+
+  .listTitle h3 {
+    margin-top: 7px;
+  }
+
+  .listContainer {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    overflow-x: auto;
+  }
+
   .listItem {
-    width: 150px;
+    width: 30%;
+    /* height: 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* margin-right: -5%;
+    margin-left: -5%; */
+  }
+
+  .listLeft {
+    width: 100%;
+  }
+
+  .listRight {
+    font-size: 50%;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
   }
 
   nav {
@@ -316,12 +368,24 @@ footer {
     margin-bottom: 15px;
   }
 
+  .separate {
+    font-size: 75%;
+  }
+
   .movie-heading {
     width: 100%;
   }
 
+  #title {
+    font-size: 120%;
+  }
+
   .info {
     width: 100%;
+  }
+
+  .stats {
+    font-size: 80%;
   }
 
   #addButton {
