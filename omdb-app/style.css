@@ -10,8 +10,6 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-around;
   border-bottom: 2px solid red;
   text-align: center;
   font-family: 'Russo One', sans-serif;
@@ -76,9 +74,8 @@ form {
 }
 
 .list {
-  margin-top: 22px;
   width: 28%;
-  height: 715px;
+  height: 800px;
   border: 2px solid red;
   text-align: center;
   overflow-y: auto;
@@ -99,6 +96,8 @@ form {
 .movie-heading {
   display: flex;
   justify-content: space-around;
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .heading-info {
@@ -142,6 +141,7 @@ nav {
 
 .img-ratings {
   display: flex;
+  margin-top: 15px;
 }
 
 .ratings {
@@ -270,8 +270,13 @@ footer {
   #searchBar {
     height: 20px;
     text-indent: 5px;
-    font-size: 12px;
+    font-size: 10px;
     background-color: whitesmoke;
+  }
+
+  #searchBtn {
+    padding: 6px 8px;
+    font-size: 8px;
   }
 
   #modal-textbox {
@@ -319,7 +324,7 @@ footer {
     height: 188px;
     border: 2px solid red;
     text-align: center;
-    /* overflow: auto; */
+    margin-bottom: 20px;
     background-color: black;
     font-family: 'Russo One', sans-serif;
   }
