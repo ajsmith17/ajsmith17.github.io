@@ -248,7 +248,7 @@ footer {
 
 /* ============> MOBILE VERSION <============ */
 
-@media only screen and (max-device-width:800px), screen and (max-width:800px) {
+@media only screen and (max-device-width:600px), screen and (max-width:600px) {
 
   .container {
     width: 94%;
