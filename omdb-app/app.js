@@ -66,7 +66,7 @@ $(() => {
     let $listRight = $('<div class="listRight">').css({'width': '50%'});
     let selection = $('#title').text();
     let listPic = $('#poster').clone();
-    listPic.css({'width': '100px', 'border': '2px solid white'});
+    listPic.css({'width': '100px', 'border': '2px solid white', 'cursor': 'pointer'});
     $listLeft.append(listPic);
     $listRight.text(selection);
     $listRight.css('padding-right', '5px');
