@@ -248,10 +248,7 @@ footer {
 
 /* ============> MOBILE VERSION <============ */
 
-@media only screen and (max-width: 800px) {
-  body {
-    /* background: blue; */
-  }
+@media only screen and (max-device-width:800px), screen and (max-width:800px) {
 
   .container {
     width: 94%;
