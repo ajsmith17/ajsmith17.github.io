@@ -73,6 +73,18 @@ $(() => {
     $listItem.append($listLeft);
     $listItem.append($listRight);
     $('.listContainer').append($listItem);
+
+    // const saveObj = {
+    //   savedMovie: $listItem.innerHTML
+    // }
+    //
+    // let storage = JSON.stringify(saveObj);
+    // console.log(storage);
+    // debugger;
+    // // console.log($listItem.html());
+    // localStorage.setItem('savedMovie', storage);
+    // console.log(localStorage);
+
     $('.listLeft').on('click', (event) => {
       event.preventDefault();
       $(event.currentTarget).parent().remove();
