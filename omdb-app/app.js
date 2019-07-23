@@ -5,7 +5,7 @@ $(() => {
   $('form').on('submit', (event)=>{
 
     event.preventDefault();
-    // $('.info').css('visibility', 'visible');
+    
     const userInput = $('input[type="text"]').val();
 
     $.ajax({
