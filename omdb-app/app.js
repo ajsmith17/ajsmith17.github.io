@@ -95,7 +95,7 @@ $(() => {
 
   // ===========> MODAL <===============
 
-  const $openBtn = $('#openModal');
+  const $openButton = $('#openModal');
   const $modal = $('#modal');
   const $close = $('#close');
 
@@ -107,7 +107,7 @@ $(() => {
     $modal.css('display', 'none');
   };
 
-  $openBtn.on('click', openModal)
+  $openButton.on('click', openModal)
   $close.on('click', closeModal)
   setTimeout(openModal, 1000);
 
